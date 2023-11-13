@@ -5,6 +5,8 @@ int main()
 {
   VLInt r;
   
+
+
   r = 31;
   if(fermat(r, 2)){
     lprint(r);

@@ -1,5 +1,5 @@
 #include "vlint_lib.hpp"
-
+#include <cstdlib>      // srand,rand
 // 最大公約数(ユークリッド互除法)
 VLInt gcd(VLInt a, VLInt b)
 {
@@ -24,14 +24,14 @@ VLInt lcm(VLInt a, VLInt b)
 // バイナリーウィンド  
 VLInt mod_exp(VLInt a, VLInt n, VLInt m)
 {
-  VLInt s;
-  int j;
-
-  s = a;
-  for (j = 1; (VLInt)j < n;j++) {
-	  lprint(j);
-	  s = (s * a) % m;
-  }
+  VLInt s=1;
+  while (n>0) {
+	  if (n%2==1) {
+		  s = (s * a)%m;
+	  }
+	  n = n / 2;
+	  a = (a * a) % m;
+	}
 
 
   return s;
@@ -42,11 +42,14 @@ VLInt mod_exp(VLInt a, VLInt n, VLInt m)
 int fermat(VLInt r, int num)
 {
   VLInt rm1;
-  int i, j, result = 1;
+  bool result;
 
-  rm1 = r - 1;
-
-
+  rm1 = mod_exp(r, ((VLInt)rand() % r+1), num);
+  if (rm1==1) {
+	  result=true;
+  }else {
+	  result =false;
+  }
   return result;
 }
 
