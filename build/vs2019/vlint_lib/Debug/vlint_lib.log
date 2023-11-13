@@ -1,0 +1,5 @@
+﻿  vlint_lib.cpp
+C:\Users\syoyt\Downloads\rsa\rsa\src\vlint_lib.cpp(22,7): warning C4101: 'j': ローカル変数は 1 度も使われていません。
+C:\Users\syoyt\Downloads\rsa\rsa\src\vlint_lib.cpp(35,10): warning C4101: 'j': ローカル変数は 1 度も使われていません。
+C:\Users\syoyt\Downloads\rsa\rsa\src\vlint_lib.cpp(35,7): warning C4101: 'i': ローカル変数は 1 度も使われていません。
+  vlint_lib.vcxproj -> C:\Users\syoyt\Downloads\rsa\rsa\lib\Debug\vlint_lib.lib
